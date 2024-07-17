@@ -26,6 +26,7 @@
     "deploy": "npm run build-demo; touch docs/.nojekyll; gh-pages -d docs -t --git git",
     "lint": "eslint src tests rollup.config.mjs rollup.test.config.mjs vite.config.js",
     "precommit": "NODE_ENV=production lint-staged; npm run test",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run test; rm -rf dist/*; npm run build;",
     "prerelease": "rm -rf dist/*; npm run build; zip -r dist.zip dist",
     "pretest": "npm run lint",
