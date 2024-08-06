@@ -3551,9 +3551,10 @@ const createScatterplot = (
     if (autoWidth || autoHeight) {
       const { width: newWidth, height: newHeight } =
         canvas.getBoundingClientRect();
+      const minWH = Math.min(newWidth, newHeight);
 
-      if (autoWidth) setCurrentWidth(newWidth);
-      if (autoHeight) setCurrentHeight(newHeight);
+      if (autoWidth) setCurrentWidth(minWH);
+      if (autoHeight) setCurrentHeight(minWH);
 
       updateViewAspectRatio();
       draw = true;
