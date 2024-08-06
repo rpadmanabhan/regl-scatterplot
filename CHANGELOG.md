@@ -1,3 +1,12 @@
+## 1.10.2
+
+- Fix: expose x start/end and y start/end for horizontal and vertical line annotations.
+- Fix: ensure KDBush worker works in prod build
+
+## 1.10.1
+
+- Fix: ensure single annotations render properly ([#187](https://github.com/flekschas/regl-scatterplot/issues/187))
+
 ## 1.10.0
 
 - Feat: add support for annotations via `scatterplot.drawAnnotations()`
